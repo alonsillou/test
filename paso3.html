@@ -22,33 +22,14 @@
 </body>
 
 <footer>
-    <script type="text/javascript">
-        // Set to false if opt-in required
-        var trackByDefault = true;
-        function acEnableTracking() {
-        var expiration = new Date(new Date().getTime() + 1000 * 60 * 60 * 24 * 30);
-        document.cookie = "ac_enable_tracking=1; expires= " + expiration + "; path=/";
-        acTrackVisit();
-        }
-        function acTrackVisit() {
-        var trackcmp_email = '';
-        var trackcmp = document.createElement("script");
-        trackcmp.async = true;
-        trackcmp.type = 'text/javascript';
-        trackcmp.src =
-        '//trackcmp.net/visit?actid=649508455&e='+encodeURIComponent(trackcmp_email)+'&r='+encodeURIComponent(document.referrer)+'&u='+encodeURIComponent(window.location.href);
-        var trackcmp_s = document.getElementsByTagName("script");
-        if (trackcmp_s.length) {
-        trackcmp_s[0].parentNode.appendChild(trackcmp);
-        } else {
-        var trackcmp_h = document.getElementsByTagName("head");
-        trackcmp_h.length && trackcmp_h[0].appendChild(trackcmp);
-        }
-        }
-        if (trackByDefault || /(^|; )ac_enable_tracking=([^;]+)/.test(document.cookie)) {
-        acEnableTracking();
-        }
-        </script>
+    
+   <script type="text/javascript">
+    (function(e,t,o,n,p,r,i){e.visitorGlobalObjectAlias=n;e[e.visitorGlobalObjectAlias]=e[e.visitorGlobalObjectAlias]||function(){(e[e.visitorGlobalObjectAlias].q=e[e.visitorGlobalObjectAlias].q||[]).push(arguments)};e[e.visitorGlobalObjectAlias].l=(new Date).getTime();r=t.createElement("script");r.src=o;r.async=true;i=t.getElementsByTagName("script")[0];i.parentNode.insertBefore(r,i)})(window,document,"https://prism.app-us1.com/prism.js","vgo");
+    vgo('setAccount', '649508455');
+    vgo('setTrackByDefault', true);
+
+    vgo('process');
+</script>
         
 </footer>
 
